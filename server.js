@@ -1,6 +1,6 @@
 // import cái express cái mình vừa cài vào để dùng
 const express = require('express')
-const API_GET_ALL = 'http://localhost:3000/api/all'
+const API_GET_ALL = 'https://bangquang.herokuapp.com/api/all'
 
 // const axios = require('axios')
 
