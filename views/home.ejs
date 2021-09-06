@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="title">
+        <span class="title__text">bangquang11</span>
+    </div>
+
+    <% if(typeof errorMsg != 'undefined') {  %>
+    <div class="error">
+        <span class="error__message"><%= errorMsg %></span>
+    </div>
+    <% } %>
+
+    <form action="/api/create" method="post">
+        <div class="input__button">
+            <input name="taskName" class="input__button__input">
+            <button class="input__button__button">Add</button>
+        </div>
+    </form>
+
+    <% for (var i = 0; i < tasks.length; i++) { %>
+    <div class="tasks">
+        <% if (tasks[i].isDone == 'true') { %>
+        <form action="/api/update/<%= tasks[i]._id %>" method="post">
+            <input class="tasks__checkbox" type="checkbox" checked id="vehicle1" name="isDone" value="true">
+        </form>
+        <% } else { %>
+                <form style="margin-right: 5%;" action="/api/update/<%= tasks[i]._id %>" method="post">
+                    <div class="checkbox__btn">
+                        <input class="tasks__checkbox" type="checkbox" id="vehicle1" name="isDone" value="true">
+                        <button class="btn__done">Done</button>
+                    </div>
+                </form>
+        <% } %>
+
+        <% if (tasks[i].isDone == 'true') { %>
+        <div class="tasks__name">
+            <span class="tasks__name__text"><del><%= tasks[i].taskName %></del> </span>
+        </div>
+        <% } else { %>
+            <span class="tasks__name__text"><%= tasks[i].taskName %></span>
+        <% } %>
+
+        <div class="tasks__icon">
+            <form action="/api/delete/<%= tasks[i]._id %>" method="post">
+                <button class="tasks__icon__btn"><span class="material-icons" style="font-size: 74px; color: red">close</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="line">
+        <hr>
+    </div>
+    <% } %>
+</div>
+
+
+</body>
+</html>

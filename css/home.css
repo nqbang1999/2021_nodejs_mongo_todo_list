@@ -1,0 +1,110 @@
+html {
+    font-size: 355%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.title {
+    margin-left: 10%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+.title__text {
+    font-weight: bold;
+}
+
+.input__button {
+    padding-left: 10%;
+    width: 80%;
+}
+
+.input__button__input {
+    height: 100px;
+    width: 78%;
+    font-size: 57px;
+}
+
+.input__button__button {
+    background-color: cornflowerblue;
+    color: white;
+    border: unset;
+    width: 17%;
+    height: 106px;
+    font-size: 57px;
+}
+
+.tasks__checkbox {
+    width: 50px;
+    height: 56px;
+}
+
+.tasks {
+    padding-top: 5%;
+    padding-left: 10%;
+    width: 78%;
+    display: flex;
+}
+
+.tasks__icon {
+    position: absolute;
+    right: 12%;
+    color: tomato;
+}
+
+.tasks__name__text {
+    /*padding-left: 5%;*/
+    /*padding-right: 1%;*/
+}
+
+.line {
+    margin-left: 10%;
+    width: 78%;
+}
+
+.error {
+    padding-left: 10%;
+    color: red;
+    font-size: 66%;
+}
+
+.tasks__name {
+    /*margin-right: 10%;*/
+    padding-left: 5%;
+    width: 81%;
+}
+
+.tasks__icon__btn {
+    border: unset;
+    background-color: unset;
+}
+
+.checkbox__btn {
+    display: block;
+}
+
+.btn__done {
+    display: block;
+    margin-left: 4px;
+    margin-right: 3px;
+    width: -webkit-fill-available;
+    border: unset;
+    color: white;
+    background-color: forestgreen;
+    height: 28px;
+    border-radius: 11px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+.input__button__button:hover {
+    background-color: tomato;
+}
+
+.tasks__icon__btn:hover {
+    background-color: yellow;
+    /*color: black;*/
+}
+
+.btn__done:hover {
+    background-color: black;
+    color: white;
+}
